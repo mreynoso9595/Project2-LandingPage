@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header__text {
+    font-size: 17.4px;
+}
+
+.header__text span {
+    font-size: 0.5em;
+}
+
+h3:first-of-type {
+    font-size: 8.22px;
+    color: #908B87;
+}
+h3:last-of-type {
+    font-size: 9.35px;
+    margin-top: 1.3em;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/nycforheader.jpeg");
+    background-size: cover;
+    background-position-y: 40%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    flex-direction: column;
+    height: 88px;
+    border: solid black 2px;
+}
+
+.headertext__grouped {
+    margin-left: 2em;
+}

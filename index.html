@@ -5,14 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipulating the DOM</title>
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/app.js"></script>
 </head>
 <body>
     <header class="page__header">
-        <h1 class="header__text">New York City <h3>Travel Guide<br>USA</h3></h1>
-        <h3>#1 in Best Places to Visit In NYC</h3>
+        <div class="header__wrapper">
+            <div class="headertext__grouped">
+            <h1 class="header__text">New York City <span>Travel Guide</span></h1>
+            <h3>USA</h3>
+            <h3>#1 in Best Places to Visit In NYC</h3>
+            </div>
+        </div>
         <nav class="navbar__menu">
             <ul id="navbar__list"></ul> 
         </nav>
@@ -64,7 +71,7 @@
         </section>
     </main>
     <footer class="page__footer">
-        
+
     </footer>
 </body>
 </html>
