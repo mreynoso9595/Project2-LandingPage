@@ -31,7 +31,7 @@ h3:last-of-type {
     color: white;
     flex-direction: column;
     height: 88px;
-    border: solid black 2px;
+    min-height: 12.6vh;
 }
 
 .headertext__grouped {
