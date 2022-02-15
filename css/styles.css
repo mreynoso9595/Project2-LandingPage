@@ -93,11 +93,15 @@ h3:last-of-type {
 }
 
 .your-active-class, .section3 {
-    margin-left: 14px;
+    margin: 14px 0 14px 14px;
+}
+
+p {
+    margin: 10px 0 10px 0;
 }
 
 .section2, .section4 {
-    margin-right: 14px;
+    margin: 14px 14px 14px 0;
 }
 
 .section2, .section4 {
