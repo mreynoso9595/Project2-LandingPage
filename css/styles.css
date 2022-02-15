@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+p {
+    margin: 10px 0 10px 0;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    color: white;
+    width: 77px;
+    height: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+}
+
 .header__text {
     font-size: 17.4px;
 }
@@ -86,18 +101,8 @@ h3:last-of-type {
     font-size: 9px;
 }
 
-.landing__container button {
-    width: 77px;
-    height: 18px;
-    font-size: 8px;
-}
-
 .your-active-class, .section3 {
     margin: 14px 0 14px 14px;
-}
-
-p {
-    margin: 10px 0 10px 0;
 }
 
 .section2, .section4 {
@@ -110,6 +115,24 @@ p {
 
 #s2_button, #s4_button {
     text-align: right;
+}
+
+#s2_button button {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/time-square.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+#section3 {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/nyc-hotel.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+#s4_button button {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/statue-liberty.jpeg');
+    background-size: cover;
+    background-position-y: 21%;
 }
 
 footer {
