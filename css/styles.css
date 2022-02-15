@@ -68,3 +68,47 @@ h3:last-of-type {
     text-decoration: underline red;
     text-underline-offset: 93%;
 }
+
+.landing__container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: #000000;
+}
+
+.landing__container h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13.62px;
+}
+
+.landing__container p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 9px;
+}
+
+.landing__container button {
+    width: 77px;
+    height: 18px;
+    font-size: 8px;
+}
+
+.your-active-class, .section3 {
+    margin-left: 14px;
+}
+
+.section2, .section4 {
+    margin-right: 14px;
+}
+
+.section2, .section4 {
+    text-align: right;
+}
+
+#s2_button, #s4_button {
+    text-align: right;
+}
+
+footer {
+    height: 45px;
+    background-color: #908B87;
+}
