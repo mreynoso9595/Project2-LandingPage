@@ -14,6 +14,107 @@ body {
     min-height: 100%;
 }
 
+main {
+    overflow: scroll;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+}
+
+p {
+    margin: 10px 0 10px 0;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    color: white;
+    width: 140px;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+button:hover {
+    border-width: 1px;
+    border-style: double;
+    border-color: rgb(255, 114, 114);
+}
+button a {
+    text-decoration: none;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: center;
+    background-image: url("../images/nycforheader.jpeg");
+    background-size: cover;
+    background-position-y: 40%;
+    background-color: rgba(51, 51, 51, 0.514);
+    background-blend-mode: multiply;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    flex-direction: column;
+    min-height: 217.5px;
+}
+
+.header__text {
+    font-size: 30px;
+}
+
+.header__text span {
+    font-size: 0.5em;
+    color: #D3D7DC;
+
+}
+
+h3:first-of-type {
+    font-size: 10px;
+    color: #D3D7DC;
+}
+h3:last-of-type {
+    font-size: 14px;
+    margin-top: 1.3em;
+}
+
+.headertext__grouped {
+    margin-left: 2em;
+}
+
+.navbar__menu {
+    display: flex;
+    border-top: solid #D3D7DC 2px;
+    border-bottom: solid #D3D7DC 2px;
+    height: 60px;
+}
+
+#navbar__list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+}
+
+#navbar__list li {
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+#navbar__list li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#navbar__list li a:hover {
+    text-decoration: underline red 3px;
+    text-underline-offset: 150%;
+    font-weight: bold;
+}
+
 .main__wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -25,88 +126,56 @@ body {
     "sec4";
 }
 
-p {
-    margin: 10px 0 10px 0;
+.photo__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-gap: 10px;
+    grid-template-areas:
+    "p1 p2 p3";
+    height: 85px;
+    margin-top: 20px;
 }
 
-button {
-    border: none;
-    border-radius: 4px;
-    color: white;
-    width: 77px;
-    height: 18px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 8px;
-    font-weight: 400;
+    .photo__grid #p1 {
+        grid-area: p1;
+        border: solid #d3d7dcbb 1px;
+        background-image: url('../images/time-square.jpeg');
+        background-size: cover;
+        background-position: center center;
+        border-radius: 5px;
 }
 
-button:hover {
-    border-width: 1px;
-    border-style: double;
-    border-color: rgb(255, 114, 114);
+    .photo__grid #p2 {
+        grid-area: p2;
+        border: solid #d3d7dcbb 1px;
+        background-image: url('../images/nyc-hotel.jpeg');
+        background-size: cover;
+        background-position: center center;
+        border-radius: 5px;
 }
 
-.header__text {
-    font-size: 17.4px;
+    .photo__grid #p3 {
+        display: flex;
+        grid-area: p3;
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        border: solid #d3d7dcbb 1px;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/statue-liberty.jpeg');
+        background-size: cover;
+        background-position: center center;
+        border-radius: 5px;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
 }
 
-.header__text span {
-    font-size: 0.6em;
+#p3 div {
+    height: fit-content;
 }
 
-h3:first-of-type {
-    font-size: 8.22px;
-    color: #908B87;
-}
-h3:last-of-type {
-    font-size: 9.35px;
-    margin-top: 1.3em;
-}
-
-.header__wrapper {
-    display: flex;
-    justify-content: center;
-    background-image: url("../images/nycforheader.jpeg");
-    background-size: cover;
-    background-position-y: 40%;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    flex-direction: column;
-    height: 88px;
-    min-height: 12.6vh;
-}
-
-.headertext__grouped {
-    margin-left: 2em;
-}
-
-.navbar__menu {
-    display: block;
-    border-top: solid #908B87 1.15px;
-    border-bottom: solid #908B87 1.15px;
-}
-#navbar__list {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 4vh;
-    width: 50%;
-}
-
-#navbar__list li {
-    list-style: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 6.02px;
-}
-
-#navbar__list li a {
-    text-decoration: none;
-    color: #000000;
-}
-
-#navbar__list li a:hover {
-    text-decoration: underline red;
-    text-underline-offset: 100%;
+#p3 div span {
+    font-size: 0.7em;
 }
 
 .landing__container {
@@ -117,13 +186,14 @@ h3:last-of-type {
 
 .landing__container h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 13.62px;
+    font-size: 28px;
 }
 
 .landing__container p {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 9px;
+    font-size: 18px;
+    line-height: 25px;
 }
 
 #section1 {
@@ -139,23 +209,27 @@ h3:last-of-type {
     grid-area: sec4;
 }
 
-.your-active-class, .section3 {
+.your-active-class, 
+.section3 {
     padding: 14px 0 14px 14px;
     background: radial-gradient(100% 100% at 50% 0%, rgba(233, 211, 160, 0.65) 28.12%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
 }
 
-.section2, .section4 {
+.section2, 
+.section4 {
     padding: 14px 14px 14px 0;
     background: radial-gradient(100% 100% at 50% 0%, rgba(212, 168, 138, 0.65) 28.12%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
 }
 
-.section2, .section4 {
+.section2, 
+.section4 {
     text-align: right;
 }
 
-#s2_button, #s4_button {
+#s2_button, 
+#s4_button {
     text-align: right;
 }
 
@@ -182,9 +256,9 @@ footer {
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    height: 9vh;
+    height: 108.7px;
     margin-top: auto;
-    background-color: #908B87;
+    background-color: rgb(40, 40, 40);
 }
 
 footer a {
@@ -193,21 +267,17 @@ footer a {
     font-family: 'Roboto', sans-serif;
 }
 
-.footer__list {
-    line-height: 10%;
-}
-
 .footer__list li {
     display: inline-block;
     list-style: none;
-    font-size: 8.02px;
-    margin-inline: 8px;
+    font-size: 14px;
+    margin-inline: 10px;
 }
 
 .social__icons {
     display: inline-block;
-    margin-inline: 8px;
-    font-size: 0.8em;
+    margin-inline: 10px;
+    font-size: 1.3em;
 }
 
 footer a:hover {
@@ -217,10 +287,19 @@ footer a:hover {
 
 
 /* tablet design */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 637px) {
+
+.header__wrapper {
+    min-height: 30vh;
+    background-position-y: 35%;
+}
 
 .header__text {
     font-size: 25.4px;
+}
+
+.header__text span {
+    color: #908B87;
 }
 
 h3:first-of-type {
@@ -230,17 +309,6 @@ h3:first-of-type {
 h3:last-of-type {
     font-size: 12.35px;
     margin-top: 1.3em;
-}
-
-.header__wrapper {
-    display: flex;
-    justify-content: center;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    flex-direction: column;
-    height: 99px;
-    min-height: 12.6vh;
 }
 
 }
