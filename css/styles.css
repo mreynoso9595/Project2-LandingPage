@@ -29,7 +29,8 @@ p {
 
 button {
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
+    background-color: rgb(40, 40, 40);
     color: white;
     width: 140px;
     height: 40px;
@@ -53,9 +54,10 @@ button a {
     background-image: url("../images/nycforheader.jpeg");
     background-size: cover;
     background-position-y: 40%;
-    background-color: rgba(51, 51, 51, 0.514);
+    background-color: rgba(119, 119, 119, 0.514);
     background-blend-mode: multiply;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     color: white;
     flex-direction: column;
     min-height: 217.5px;
@@ -67,16 +69,19 @@ button a {
 
 .header__text span {
     font-size: 0.5em;
+    font-weight: 600;
     color: #D3D7DC;
 
 }
 
 h3:first-of-type {
     font-size: 10px;
+    font-weight: 600;
     color: #D3D7DC;
 }
 h3:last-of-type {
     font-size: 14px;
+    font-weight: 600;
     margin-top: 1.3em;
 }
 
@@ -93,14 +98,13 @@ h3:last-of-type {
 
 #navbar__list {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    width: 80%;
 }
 
 #navbar__list li {
     list-style: none;
-    font-family: 'Roboto', sans-serif;
+    margin-left: 2.5em;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
 }
 
@@ -134,6 +138,7 @@ h3:last-of-type {
     "p1 p2 p3";
     height: 85px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
     .photo__grid #p1 {
@@ -233,24 +238,6 @@ h3:last-of-type {
     text-align: right;
 }
 
-#s2_button button {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/time-square.jpeg');
-    background-size: cover;
-    background-position: center;
-}
-
-#section3 {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/nyc-hotel.jpeg');
-    background-size: cover;
-    background-position: center;
-}
-
-#s4_button button {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/statue-liberty.jpeg');
-    background-size: cover;
-    background-position-y: 21%;
-}
-
 footer {
     display: flex;
     justify-content: space-around;
@@ -287,28 +274,29 @@ footer a:hover {
 
 
 /* tablet design */
-@media screen and (min-width: 637px) {
+@media screen and (min-width: 639px) {
 
 .header__wrapper {
-    min-height: 30vh;
-    background-position-y: 35%;
+    background-color: transparent;
+    min-height: 300px;
 }
 
 .header__text {
-    font-size: 25.4px;
+    font-size: 43.5px;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
 }
 
 .header__text span {
     color: #908B87;
+    text-shadow: none;
 }
 
 h3:first-of-type {
-    font-size: 12.22px;
-    color: #908B87;
+    font-size: 15px;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
 }
 h3:last-of-type {
-    font-size: 12.35px;
-    margin-top: 1.3em;
+    font-size: 20.35px;
 }
 
 }
