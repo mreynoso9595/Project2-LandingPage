@@ -34,9 +34,9 @@ button {
     color: white;
     width: 140px;
     height: 40px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 10px;
 }
 button:hover {
@@ -106,6 +106,7 @@ h3:last-of-type {
     margin-left: 2.5em;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    font-weight: 500;
 }
 
 #navbar__list li a {
@@ -116,7 +117,7 @@ h3:last-of-type {
 #navbar__list li a:hover {
     text-decoration: underline red 3px;
     text-underline-offset: 150%;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .main__wrapper {
@@ -162,7 +163,7 @@ h3:last-of-type {
     .photo__grid #p3 {
         display: flex;
         grid-area: p3;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: 14px;
         border: solid #d3d7dcbb 1px;
         background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/statue-liberty.jpeg');
@@ -190,13 +191,13 @@ h3:last-of-type {
 }
 
 .landing__container h2 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 28px;
 }
 
 .landing__container p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 18px;
     line-height: 25px;
 }
@@ -251,19 +252,20 @@ footer {
 footer a {
     text-decoration: none;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer__list li {
     display: inline-block;
     list-style: none;
     font-size: 14px;
-    margin-inline: 10px;
+    font-weight: 500;
+    margin-inline: 8px;
 }
 
 .social__icons {
     display: inline-block;
-    margin-inline: 10px;
+    margin-inline: 8px;
     font-size: 1.3em;
 }
 
@@ -274,15 +276,15 @@ footer a:hover {
 
 
 /* tablet design */
-@media screen and (min-width: 639px) {
+@media screen and (min-width: 640px) {
 
 .header__wrapper {
-    background-color: transparent;
     min-height: 300px;
+    background-color: transparent;
 }
 
 .header__text {
-    font-size: 43.5px;
+    font-size: 38px;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
 }
 
@@ -292,11 +294,52 @@ footer a:hover {
 }
 
 h3:first-of-type {
-    font-size: 15px;
+    font-size: 13px;
     text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
 }
 h3:last-of-type {
-    font-size: 20.35px;
+    font-size: 18.35px;
+}
 }
 
+
+
+/* desktop design */
+@media screen and (min-width: 1024px) {
+
+/* .header__wrapper {
+    background-color: transparent;
+    min-height: 300px;
+} */
+
+.header__text {
+    font-size: 45.5px;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
+}
+
+.header__text span {
+    color: #908B87;
+    text-shadow: none;
+}
+
+h3:first-of-type {
+    font-size: 17px;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
+}
+h3:last-of-type {
+    font-size: 23.35px;
+}
+
+.landing__container {
+    max-width: 70em;
+}
+
+.section2, .section4 {
+    display: flex;
+}
+
+.section2 .landing__container, 
+.section4 .landing__container{
+    margin-left: auto;
+}
 }
