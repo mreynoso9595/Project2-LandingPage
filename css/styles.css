@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -34,7 +35,6 @@ button {
     color: white;
     width: 140px;
     height: 40px;
-    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 500;
     margin-top: 10px;
@@ -56,7 +56,6 @@ button a {
     background-position-y: 40%;
     background-color: rgba(119, 119, 119, 0.514);
     background-blend-mode: multiply;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: white;
     flex-direction: column;
@@ -86,7 +85,7 @@ h3:last-of-type {
 }
 
 .headertext__grouped {
-    margin-left: 2em;
+    margin-left: 1em;
 }
 
 .navbar__menu {
@@ -99,12 +98,12 @@ h3:last-of-type {
 #navbar__list {
     display: flex;
     align-items: center;
+    margin-left: -19px;
 }
 
 #navbar__list li {
     list-style: none;
     margin-left: 2.5em;
-    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 500;
 }
@@ -163,7 +162,6 @@ h3:last-of-type {
     .photo__grid #p3 {
         display: flex;
         grid-area: p3;
-        font-family: 'Montserrat', sans-serif;
         font-size: 14px;
         border: solid #d3d7dcbb 1px;
         background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/statue-liberty.jpeg');
@@ -191,12 +189,10 @@ h3:last-of-type {
 }
 
 .landing__container h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 28px;
 }
 
 .landing__container p {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
@@ -217,14 +213,14 @@ h3:last-of-type {
 
 .your-active-class, 
 .section3 {
-    padding: 14px 0 14px 14px;
+    padding: 34px 0 34px 1em;
     background: radial-gradient(100% 100% at 50% 0%, rgba(233, 211, 160, 0.65) 28.12%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
 }
 
 .section2, 
 .section4 {
-    padding: 14px 14px 14px 0;
+    padding: 34px 1em 34px 0;
     background: radial-gradient(100% 100% at 50% 0%, rgba(212, 168, 138, 0.65) 28.12%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
 }
@@ -241,7 +237,8 @@ h3:last-of-type {
 
 footer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     align-items: center;
     height: 108.7px;
@@ -252,25 +249,31 @@ footer {
 footer a {
     text-decoration: none;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+}
+footer a:hover {
+    color: #ffffffcc;
 }
 
-.footer__list li {
-    display: inline-block;
-    list-style: none;
-    font-size: 14px;
-    font-weight: 500;
-    margin-inline: 8px;
+.social__icons__container {
+    display: flex;
+    padding-bottom: 1px;
 }
 
 .social__icons {
-    display: inline-block;
-    margin-inline: 8px;
-    font-size: 1.3em;
+    margin-inline: 15px;
+    font-size: 1.5em;
+}   
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 1px;
 }
 
-footer a:hover {
-    color: #ffffffcc;
+.footer__list li {
+    list-style: none;
+    margin-inline: 15px;
 }
 
 
@@ -300,17 +303,20 @@ h3:first-of-type {
 h3:last-of-type {
     font-size: 18.35px;
 }
+
+#navbar__list li {
+    margin-inline: 2.8em;
+}
+
+.footer__list li {
+    margin-inline: 18px;
+}
 }
 
 
 
 /* desktop design */
 @media screen and (min-width: 1024px) {
-
-/* .header__wrapper {
-    background-color: transparent;
-    min-height: 300px;
-} */
 
 .header__text {
     font-size: 45.5px;
@@ -341,5 +347,9 @@ h3:last-of-type {
 .section2 .landing__container, 
 .section4 .landing__container{
     margin-left: auto;
+}
+
+.footer__list li {
+    margin-inline: 22px;
 }
 }
