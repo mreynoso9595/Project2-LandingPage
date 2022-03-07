@@ -16,15 +16,14 @@ for (let i = 0; i < navItemsArray.length; i++) {
     navbarList.append(listItem);
 };
 
-
 // Event listeners for navigation on scroll
 
 const navBar = document.querySelector('.navbar__menu');
 const topOfNav = navBar.offsetTop;
 const navItems = document.querySelectorAll('.navbar__menu>ul>li>a');
-const sectionWrap = document.querySelector('.main__wrapper')
+const sectionWrap = document.querySelector('.main__wrapper');
 
-function fixNav() {
+const fixNav = () => {
     if (window.scrollY >= topOfNav) {
         sectionWrap.style.paddingTop = navBar.offsetHeight + 'px';
         document.body.classList.add('fixed-nav');
@@ -39,12 +38,39 @@ window.addEventListener('scroll', fixNav);
 navItems.forEach(item => {
     window.addEventListener("scroll", () => {
         item.classList.toggle("sticky__a", window.scrollY > navBar.offsetTop);
-    })
+    });
 });
 
 //Section Acitve State
 
 
+const nodeListToArray = Array.from(navItems);
+const overview = nodeListToArray[0];
+const thingsToDo = nodeListToArray[1];
+const hotels = nodeListToArray[2];
+const dining = nodeListToArray[3];
+
+console.log(overview, thingsToDo, hotels, dining);
+
+
+
+// const section = document.querySelectorAll('section');
+
+// window.onscroll = () => {
+
+//     section.forEach(sec => {
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop;
+//         let height = sec.offsetHeight;
+//         let getAttribute = sec.getAttribute('class');
+
+//         if (top >= offset && top < offset + height){
+//             navItems.forEach(item => {
+//                 item.classList.remove('')
+//             })
+//         }
+//     })
+// }
 
 
 

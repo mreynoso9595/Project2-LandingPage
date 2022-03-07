@@ -2,11 +2,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
     font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
     height: 100%
 }
 
