@@ -1,14 +1,16 @@
+
 // Navigation is built dynamically as an unordered list
+
 const navbarList = document.getElementById('navbar__list');
 
-navItems = ["Overview", "Things to do", "Hotels", "Dining"];
+navItemsArray = ["Overview", "Things to do", "Hotels", "Dining"];
 
-for (let i = 0; i < navItems.length; i++) {
+for (let i = 0; i < navItemsArray.length; i++) {
     let listItem = document.createElement('li');
     let aTag = document.createElement('a');
 
     aTag.setAttribute('href',"#");
-    aTag.innerHTML = navItems[i];
+    aTag.innerHTML = navItemsArray[i];
 
     listItem.appendChild(aTag);
     navbarList.append(listItem);
@@ -16,25 +18,29 @@ for (let i = 0; i < navItems.length; i++) {
 
 
 // Event listeners for navigation on scroll
-const navBar = document.querySelector("nav");
-const navA = document.querySelectorAll('.navbar__menu>ul>li>a');
 
-window.addEventListener("scroll", () => {
-    navBar.classList.toggle("sticky", window.scrollY > navBar.offsetTop);
-})
+const navBar = document.querySelector('.navbar__menu');
+const topOfNav = navBar.offsetTop;
+const navItems = document.querySelectorAll('.navbar__menu>ul>li>a');
+const sectionWrap = document.querySelector('.main__wrapper')
 
-navA.forEach(item => {
+function fixNav() {
+    if (window.scrollY >= topOfNav) {
+        sectionWrap.style.paddingTop = navBar.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+    } else {
+        sectionWrap.style.paddingTop = 0;
+        document.body.classList.remove('fixed-nav');
+    }
+};
+
+window.addEventListener('scroll', fixNav);
+
+navItems.forEach(item => {
     window.addEventListener("scroll", () => {
         item.classList.toggle("sticky__a", window.scrollY > navBar.offsetTop);
     })
 });
-
-
-
-
-
-
-
 
 //Section Acitve State
 
