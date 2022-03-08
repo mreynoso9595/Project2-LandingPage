@@ -3,7 +3,7 @@
 
 const navbarList = document.getElementById('navbar__list');
 
-navItemsArray = ["Overview", "Things to do", "Hotels", "Dining"];
+const navItemsArray = ["Overview", "Things to do", "Hotels", "Dining"];
 
 for (let i = 0; i < navItemsArray.length; i++) {
     let listItem = document.createElement('li');
@@ -41,36 +41,56 @@ navItems.forEach(item => {
     });
 });
 
-//Section Acitve State
+//Section acitve state + scroll to anchor
+
+const overview = navItems[0];
+const thingsToDo = navItems[1];
+const hotels = navItems[2];
+const dining = navItems[3];
+const sections = document.querySelectorAll('section');
+const headerImg = document.querySelector('.header__wrapper');
+const section1 = document.querySelector('#section1');
+
+for (let i = 0; i < navItems.length; i++) {
+    navItems[i].classList.add('section' + (i + 1));
+}
+
+overview.setAttribute('href','#section1');
+overview.classList.add('active');
+thingsToDo.setAttribute('href', '#section2');
+hotels.setAttribute('href', '#section3');
+dining.setAttribute('href', '#section4');
+
+window.addEventListener("scroll", () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= (sectionTop - sectionHeight / 3)) {
+            current = section.getAttribute('id');
+        }
+    })
+    
+    navItems.forEach(item => {
+        item.classList.remove('active');
+
+        if (item.classList.contains(current)) {
+            item.classList.add('active');
+        }
+    })
+
+    if (scrollY >= headerImg.offsetTop && scrollY <= section1.offsetTop) {
+        overview.classList.add('active');
+    }
+})
 
 
-const nodeListToArray = Array.from(navItems);
-const overview = nodeListToArray[0];
-const thingsToDo = nodeListToArray[1];
-const hotels = nodeListToArray[2];
-const dining = nodeListToArray[3];
-
-console.log(overview, thingsToDo, hotels, dining);
 
 
 
-// const section = document.querySelectorAll('section');
 
-// window.onscroll = () => {
-
-//     section.forEach(sec => {
-//         let top = window.scrollY;
-//         let offset = sec.offsetTop;
-//         let height = sec.offsetHeight;
-//         let getAttribute = sec.getAttribute('class');
-
-//         if (top >= offset && top < offset + height){
-//             navItems.forEach(item => {
-//                 item.classList.remove('')
-//             })
-//         }
-//     })
-// }
 
 
 

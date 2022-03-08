@@ -19,6 +19,7 @@ body {
 section {
     position: relative;
     min-height: 100vh;
+    scroll-margin-top: 3.5rem;
 }
 
 p {
@@ -37,9 +38,9 @@ button {
     margin-top: 10px;
 }
 button:hover {
-    border-width: 1px;
+    border-width: 3px;
     border-style: double;
-    border-color: rgb(255, 114, 114);
+    border-color: #e1a789;
 }
 button a {
     text-decoration: none;
@@ -108,12 +109,6 @@ h3:last-of-type {
 #navbar__list li a {
     text-decoration: none;
     color: #000000;
-}
-
-#navbar__list li a:hover {
-    text-decoration: underline red 3px;
-    text-underline-offset: 150%;
-    font-weight: bolder;
 }
 
 .main__wrapper {
@@ -198,32 +193,32 @@ h3:last-of-type {
 #section1 {
     grid-area: sec1;
 }
-.section2 {
+#section2 {
     grid-area: sec2;
 }
-.section3 {
+#section3 {
     grid-area: sec3;
 }
-.section4 {
+#section4 {
     grid-area: sec4;
 }
 
-.my-active-class, 
-.section3 {
+#section1, 
+#section3 {
     padding: 34px 0 34px 1em;
     background: radial-gradient(100% 100% at 50% 0%, rgba(233, 211, 160, 0.65) 28.12%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
 }
 
-.section2, 
-.section4 {
+#section2, 
+#section4 {
     padding: 34px 1em 34px 0;
     background: radial-gradient(100% 100% at 50% 0%, rgba(212, 168, 138, 0.65) 28.12%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 25%);
 }
 
-.section2, 
-.section4 {
+#section2, 
+#section4 {
     text-align: right;
 }
 
@@ -337,12 +332,12 @@ h3:last-of-type {
     max-width: 70em;
 }
 
-.section2, .section4 {
+#section2, #section4 {
     display: flex;
 }
 
-.section2 .landing__container, 
-.section4 .landing__container{
+#section2 .landing__container, 
+#section4 .landing__container{
     margin-left: auto;
 }
 
@@ -368,3 +363,12 @@ h3:last-of-type {
 .sticky__a {
     color: #ffffff !important;
 } 
+
+/* active state classes */
+
+#navbar__list li a.active {
+    text-decoration: underline #e1a789 3px;
+    text-underline-offset: 150%;
+    font-weight: bolder;
+    transition: 0.3 ease text-decoration;
+}
