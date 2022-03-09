@@ -84,10 +84,32 @@ window.addEventListener("scroll", () => {
     if (scrollY >= headerImg.offsetTop && scrollY <= section1.offsetTop) {
         overview.classList.add('active');
     }
-})
+});
 
 
 
+let idleTimer = null;
+let idleState = false;
+
+const showNav = (time) => {
+    clearTimeout(idleTimer);
+    if (idleState == true) {
+        navBar.classList.remove('inactive');
+    }
+    idleState = false;
+    idleTimer = setTimeout(() => {
+        if (document.body.classList.contains('fixed-nav')) {
+            navBar.classList.add('inactive');
+            idleState = true;
+        }
+    }, time)
+};
+
+showNav(2000);
+
+window.addEventListener("scroll", () => {
+    showNav(2000);
+});
 
 
 
