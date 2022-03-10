@@ -1,4 +1,4 @@
-// build nav dynamically
+// builds the nav dynamically
 const navItemsArray = ["Overview", "Things to do", "Hotels", "Dining"];
 
 for (let i = 0; i < navItemsArray.length; i++) {
@@ -13,14 +13,17 @@ for (let i = 0; i < navItemsArray.length; i++) {
     navbarList.append(listItem);
 };
 
-// define global variables
+// defines global variables
 const navBar = document.querySelector('.navbar__menu');
 const topOfNav = navBar.offsetTop;
 const navItems = document.querySelectorAll('.navbar__menu>ul>li>a');
+const sections = document.querySelectorAll('section');
+const section1 = document.querySelector('#section1');
+let current = '';
 let idleTimer = null;
 let idleState = false;
 
-// fix nav on scroll
+// fixes nav on scroll
 const fixNav = () => {
     const sectionWrap = document.querySelector('.main__wrapper');
 
@@ -35,35 +38,50 @@ const fixNav = () => {
 
 window.addEventListener('scroll', fixNav);
 
-// toggle style for nav items when nav is fixed
+// toggles style for nav items when nav is fixed
 navItems.forEach(item => {
     window.addEventListener("scroll", () => {
         item.classList.toggle("sticky__a", window.scrollY > navBar.offsetTop);
     });
 });
 
-/**
- * add href attr. to each nav link, 
- * that will scroll to the appropriate section when clicked 
-*/
-navItems[0].setAttribute('href', '#section1');
-navItems[0].classList.add('active');
-navItems[1].setAttribute('href', '#section2');
-navItems[2].setAttribute('href', '#section3');
-navItems[3].setAttribute('href', '#section4');
-
-
+// adds corresponding section to each nav item as a class
 for (let i = 0; i < navItems.length; i++) {
     navItems[i].classList.add('section' + (i + 1));
 }
 
+
+// allows the link to scroll to the appropriate section when clicking on any item from the nav
+navItems[0].classList.add('active');
+
+navItems[0].addEventListener("click", (event) => {
+    event.preventDefault()
+    section1.scrollIntoView({behavior: "smooth", block: "start"});
+})
+
+navItems[1].addEventListener("click", (event) => {
+    const section2 = document.querySelector('#section2');
+
+    event.preventDefault()
+    section2.scrollIntoView({ behavior: "smooth", block: "start" });
+})
+
+navItems[2].addEventListener("click", (event) => {
+    const section3 = document.querySelector('#section3');
+
+    event.preventDefault()
+    section3.scrollIntoView({ behavior: "smooth", block: "start" });
+})
+
+navItems[3].addEventListener("click", (event) => {
+    const section4 = document.querySelector('#section4');
+
+    event.preventDefault()
+    section4.scrollIntoView({ behavior: "smooth", block: "start" });
+})
+
+// tells us which section is in the window view
 window.addEventListener("scroll", () => {
-    const sections = document.querySelectorAll('section');
-    const headerImg = document.querySelector('.header__wrapper');
-    const section1 = document.querySelector('#section1');
-    let current = '';
-    
-    // current = which section is being viewed while scolling through the page
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
@@ -72,8 +90,21 @@ window.addEventListener("scroll", () => {
             current = section.getAttribute('id');
         }
     })
-    
-    // highlights the active section in the nav
+});
+
+// toggles the active class on the section in the window view
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        sec.classList.remove('active-class');
+
+        if (sec.id == current) {
+            sec.classList.add('active-class');
+        }
+    })
+});
+
+// highlights the active section in the nav
+window.addEventListener("scroll", () => {
     navItems.forEach(item => {
         item.classList.remove('active');
 
@@ -81,8 +112,12 @@ window.addEventListener("scroll", () => {
             item.classList.add('active');
         }
     })
+});
 
-    // highlights the first section in the nav when the page first load
+// highlights the first section in the nav when the page first loads
+window.addEventListener("scroll", () => {
+    const headerImg = document.querySelector('.header__wrapper');
+
     if (scrollY >= headerImg.offsetTop && scrollY <= section1.offsetTop) {
         navItems[0].classList.add('active');
     }
