@@ -290,7 +290,7 @@ footer a {
 
 #navbar__list li a.active {
     text-decoration: underline #e1a789 3px;
-    text-underline-offset: 141%;
+    text-underline-offset: 125%;
     font-weight: bolder;
     transition: 0.3 ease text-decoration;
 }
