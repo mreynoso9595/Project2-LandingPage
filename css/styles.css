@@ -7,7 +7,7 @@
 
 html {
     font-family: 'Montserrat', sans-serif;
-    height: 100%
+    height: 100%;
 }
 
 body {
@@ -37,11 +37,13 @@ button {
     font-weight: 500;
     margin-top: 10px;
 }
-button:hover {
-    border-width: 3px;
-    border-style: double;
-    border-color: #e1a789;
-}
+    
+    button:hover {
+        border-width: 3px;
+        border-style: double;
+        border-color: #e1a789;
+    } 
+
 button a {
     text-decoration: none;
 }
@@ -68,7 +70,6 @@ button a {
     font-size: 0.5em;
     font-weight: 600;
     color: #D3D7DC;
-
 }
 
 h3:first-of-type {
@@ -133,37 +134,37 @@ h3:last-of-type {
     margin-bottom: 20px;
 }
 
-    .photo__grid #p1 {
-        grid-area: p1;
-        border: solid #d3d7dcbb 1px;
-        background-image: url('../images/time-square.jpeg');
-        background-size: cover;
-        background-position: center center;
-        border-radius: 5px;
+.photo__grid #p1 {
+    grid-area: p1;
+    border: solid #d3d7dcbb 1px;
+    background-image: url('../images/time-square.jpeg');
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
 }
 
-    .photo__grid #p2 {
-        grid-area: p2;
-        border: solid #d3d7dcbb 1px;
-        background-image: url('../images/nyc-hotel.jpeg');
-        background-size: cover;
-        background-position: center center;
-        border-radius: 5px;
+.photo__grid #p2 {
+    grid-area: p2;
+    border: solid #d3d7dcbb 1px;
+    background-image: url('../images/nyc-hotel.jpeg');
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
 }
 
-    .photo__grid #p3 {
-        display: flex;
-        grid-area: p3;
-        font-size: 14px;
-        border: solid #d3d7dcbb 1px;
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/statue-liberty.jpeg');
-        background-size: cover;
-        background-position: center center;
-        border-radius: 5px;
-        color: white;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
+.photo__grid #p3 {
+    display: flex;
+    grid-area: p3;
+    font-size: 14px;
+    border: solid #d3d7dcbb 1px;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/statue-liberty.jpeg');
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 #p3 div {
@@ -193,12 +194,15 @@ h3:last-of-type {
 #section1 {
     grid-area: sec1;
 }
+
 #section2 {
     grid-area: sec2;
 }
+
 #section3 {
     grid-area: sec3;
 }
+
 #section4 {
     grid-area: sec4;
 }
@@ -242,9 +246,10 @@ footer a {
     text-decoration: none;
     color: white;
 }
-footer a:hover {
-    color: #ffffffcc;
-}
+
+    footer a:hover {
+        color: #ffffffcc;
+    }
 
 .social__icons__container {
     display: flex;
@@ -267,8 +272,6 @@ footer a:hover {
     list-style: none;
     margin-inline: 15px;
 }
-
-
 
 .fixed-nav nav {
     background-color: rgb(40, 40, 40);
@@ -335,8 +338,7 @@ h3:last-of-type {
 
 .landing__container h2 {
     font-size: 23.5px;
-}
-}
+}}
 
 
 
@@ -380,5 +382,4 @@ h3:last-of-type {
 
 .footer__list li {
     margin-inline: 22px;
-}
-}
+}}
